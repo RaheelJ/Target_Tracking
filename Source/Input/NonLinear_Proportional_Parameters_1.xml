@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Units -->
+<!-- Distance/Length (meters) -->
+<!-- Mass (kilograms) -->
+<!-- Time (seconds) -->
+<!-- Angle (degrees) -->
+
+<Parameters>
+
+<!--  Initial States of Interceptor  -->
+ 
+<Position 
+	Longitude="-50"
+  	Latitude="30"
+	Altitude="30000">
+</Position>
+	
+<!-- Parameters for calculation of Command -->
+
+<Command_Data
+	Tracking_Gain="0.00004"
+	Proportional_Gain="4"
+	Differential_Gain="0.8"
+	Interceptor_Velocity="4200">
+</Command_Data>
+
+<Execution
+	Stop_Distance="100"
+	Start_Distance="3000000"
+	Energy_Limit="2000000"
+	Save_CSV="1">
+</Execution>
+
+</Parameters>

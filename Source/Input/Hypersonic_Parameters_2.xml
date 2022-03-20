@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Units -->
+<!-- Distance/Length (meters) -->
+<!-- Mass (kilograms) -->
+<!-- Time (seconds) -->
+<!-- Angle (degrees) -->
+
+<Parameters>
+
+<!--  Initial States of Interceptor  -->
+ 
+<Position 
+	Longitude="-80"
+  	Latitude="50" 
+	Altitude="0">
+</Position>
+	
+<Boost_Data 
+	Boost_Speed="1400"
+  	Boost_Altitude="10800">
+</Boost_Data>
+
+<Aiming_Data
+	K1="6"
+	K2="12">
+</Aiming_Data>
+
+<!-- Parameters for calculation of Lift Coefficient -->
+
+<Param_Lift
+	k1="6"
+	k2="0.001"
+	Mass="907.184739"
+	Reference_Area="0.48387">
+</Param_Lift>
+
+<!-- Lift Coefficients of CAV-H Model -->
+
+<Lift_Coefficients
+	LC_10_3.5="0.45"
+	LC_15_3.5="0.74"
+	LC_20_3.5="1.05"
+	LC_10_5="0.425"
+	LC_15_5="0.7"
+	LC_20_5="1"
+	LC_10_8="0.4"
+	LC_15_8="0.67"
+	LC_20_8="0.95"
+	LC_10_10="0.38"
+	LC_15_10="0.63"
+	LC_20_10="0.9"
+	LC_10_15="0.37"
+	LC_15_15="0.6"
+	LC_20_15="0.85"
+	LC_10_20="0.36"
+	LC_15_20="0.57"
+	LC_20_20="0.8">
+</Lift_Coefficients>
+	
+<!-- Parameters of Velocity Error Corridor and Bank Reference -->
+
+<Corridor
+	Slope="40"
+	Bias="10"
+	Dead_Band="800000"
+	Gain="20"
+	Boost_Distance="1600000"
+	Glide_Distance="1400000"
+	Aim_Distance="400000"
+	Kill_Distance="50000">
+</Corridor>
+
+<!-- Parameters for Reaction-Jet Control -->
+
+<Param_Jet
+	Load_Long="3"
+	Load_Lat="3"
+	ON_Threshold="0.008"
+	OFF_Threshold="0.000">
+</Param_Jet>
+
+<Param_Hit
+	Hit_Radius="100"
+	Energy_Limit="2000000"
+	Save_CSV='1'>
+</Param_Hit>
+
+</Parameters>

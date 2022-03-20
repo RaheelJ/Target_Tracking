@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Units -->
+<!-- Distance/Length (meters) -->
+<!-- Mass (kilograms) -->
+<!-- Time (seconds) -->
+<!-- Angle (degrees) -->
+
+<!-- Methods: Hypersonic, Fractional, NonLinear_Proportional, Coordinated -->
+
+<Parameters>
+
+<Method>Coordinated</Method>
+
+<Common>
+	<Position 
+		Longitude="-80"
+		Latitude="50"
+		Altitude="0">
+	</Position>
+	<Boost_Data 
+		Boost_Speed="1400"
+  		Boost_Altitude="10800">
+	</Boost_Data>
+	<Execution
+		Stop_Distance="100"
+		Start_Distance="1600000"
+		Energy_Limit="2000000"
+		Save_CSV="1">
+	</Execution>
+</Common>
+
+<Hypersonic>	
+	<Aiming_Data
+		K1="6"
+		K2="12">
+	</Aiming_Data>
+	<Param_Lift
+		k1="6"
+		k2="0.001"
+		Mass="907.184739"
+		Reference_Area="0.48387">	
+	</Param_Lift>
+	<Corridor
+		Slope="40"
+		Bias="10"
+		Dead_Band="800000"
+		Gain="20"
+		Glide_Distance="1400000"
+		Aim_Distance="500000"
+		Kill_Distance="50000">
+	</Corridor>
+	<Param_Jet
+		Load_Long="3"
+		Load_Lat="3"
+		ON_Threshold="0.008"
+		OFF_Threshold="0.000">
+	</Param_Jet>
+</Hypersonic>
+	
+<Fractional
+	Fractional_Order="0.5"
+	Size="10"
+	Proportional_Gain="4"
+	Differential_Gain="1">
+</Fractional>
+
+<NonLinear_Proportional
+	Tracking_Gain="0.00004"
+	Proportional_Gain="4"
+	Differential_Gain="0.8">
+</NonLinear_Proportional>
+
+<Coordinated>
+	<Leader
+		Proportional_Gain="3"
+		Scale_Coefficient="0.5"
+		Total_Followers="4">
+	</Leader>
+	<Follower_1
+		x="10000"
+		y="10000"
+		Beta_Gain="0.2"
+		Gamma_Gain="8">
+	</Follower_1>
+	<Follower_2
+		x="-10000"
+		y="-10000"
+		Beta_Gain="0.2"
+		Gamma_Gain="0.8">
+	</Follower_2>
+	<Follower_3
+		x="100000"
+		y="100000"
+		Beta_Gain="0.4"
+		Gamma_Gain="0.6">
+	</Follower_3>
+	<Follower_4
+		x="-100000"
+		y="-100000"
+		Beta_Gain="0.12"
+		Gamma_Gain="0.8">
+	</Follower_4>
+	<Follower_5
+		x="0"
+		y="0"
+		Beta_Gain="1"
+		Gamma_Gain="1">
+	</Follower_5>
+	<Follower_6
+		x="0"
+		y="0"
+		Beta_Gain="1"
+		Gamma_Gain="1">
+	</Follower_6>
+	<Follower_7
+		x="0"
+		y="0"
+		Beta_Gain="1"
+		Gamma_Gain="1">
+	</Follower_7>
+	<Follower_8
+		x="0"
+		y="0"
+		Beta_Gain="1"
+		Gamma_Gain="1">
+	</Follower_8>
+	<Follower_9
+		x="0"
+		y="0"
+		Beta_Gain="1"
+		Gamma_Gain="1">
+	</Follower_9>
+	<Follower_10
+		x="0"
+		y="0"
+		Beta_Gain="1"
+		Gamma_Gain="1">
+	</Follower_10>
+	
+</Coordinated>
+
+</Parameters>
